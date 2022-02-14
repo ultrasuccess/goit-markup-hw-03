@@ -32,6 +32,8 @@ ol {
 }
 img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 body {
@@ -89,8 +91,8 @@ body {
 /* =====Header===== */
 .header {
   background-color: #ffffff;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   border-bottom: 1px solid #ececec;
 }
 .header-wrapper {
@@ -165,6 +167,9 @@ body {
 
 /* =====Hero===== */
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+
   background-color: #2f303a;
 }
 .hero-title {
@@ -212,6 +217,7 @@ body {
 /* =====Advantages===== */
 .advantages-list {
   display: flex;
+  align-items: center;
 }
 .advantages-list-item {
   flex-basis: calc((100% - 3 * 30px) / 4);
@@ -256,10 +262,12 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-left: -30px;
+}
+.team-card:not(:nth-child(4n)) {
+  margin-right: 30px;
 }
 .team-card {
-  margin-left: 30px;
+  flex-basis: calc((100% - 3 * 30px) / 4);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -298,8 +306,9 @@ body {
 .logo-footer {
   color: var(--primary-background-color);
 }
-.address {
-  margin-top: 20px;
+.logo.logo-footer.link {
+  display: inline-block;
+  margin-bottom: 20px;
 }
 .address-list-item:not(:last-child) {
   margin-bottom: 9px;
